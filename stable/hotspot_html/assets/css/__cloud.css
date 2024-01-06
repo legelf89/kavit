@@ -1,0 +1,111 @@
+body {
+  background: #000
+}
+
+#all {
+  margin: 160px auto;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: grow 4s;
+/*   animation-timing-function: ease-in; */
+    -webkit-animation-delay:0.5s;
+  animation-fill-mode: forwards;
+  /*Safari and Chrome*/
+}
+
+.script {
+  font-family: Microsoft YaHei;
+  color: #fff;
+  font-size: 40px;
+  display: block;
+  position: relative;
+  /*   text-align: left; */
+}
+
+.java {
+  font-family: Microsoft YaHei;
+  color: #fff;
+  font-size: 40px;
+  display: block;
+  position: relative;
+}
+
+.java:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 85px;
+  width: 20px;
+  height: 100%;
+  background-color: red;
+  -webkit-animation-delay: 2s ;
+  -webkit-animation: grow 4s;
+/*   animation-timing-function: ease-in; */
+   -webkit-animation-delay:0.5s;
+  animation-fill-mode: forwards;
+  /*Safari and Chrome*/
+}
+
+@-webkit-keyframes grow
+/*Safari and Chrome*/
+
+{
+  from {
+    width: 0px;
+  }
+  to {
+    width: 480px;
+  }
+}
+
+#div1 {
+  position: relative;
+  width: 800px;
+  height: 450px;
+  margin: -300px auto 0;
+}
+
+#div1 a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: Microsoft YaHei;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 3px 6px;
+}
+
+
+/* #div1 a:hover {border: 1px solid #eee; background: #000; } */
+
+#div1 .blue {
+  color: blue;
+}
+
+#div1 .red {
+  color: red;
+}
+
+#div1 .yellow {
+  color: yellow;
+}
+
+p {
+  font: 16px Microsoft YaHei;
+  text-align: center;
+  color: #ba0c0c;
+}
+
+p a {
+  font-size: 20px;
+  color: #ba0c0c;
+}
+
+p span {
+  font-size: 14px;
+  color: #ba0c0c;
+}
+
+
+/* p a:hover { color: red; } */

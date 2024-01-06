@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kavit 2COM</title>
+</head>
+
+
+<script language="JavaScript">    
+	function openLogout() {
+		if (window.name != 'hotspot_status') return true;
+      	open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+			window.close();
+			return false;
+	}
+</script>
+</head>
+<body>
+
+
+
+			
+
+				<img src="./2com.png" alt="Kavit 2COM" alt="Kavit 2COM"/>
+				<table width=100% cellspacing="0" cellpadding="0">
+				
+				<tr style="background-color: #346c73; color: #FFF; " height=60px>
+				<td width=20px></td>
+				<td>
+				<strong>Вітаемо, $(username)</strong></a></td>
+				
+
+				<td width=20px></td>
+				</tr>
+				</table>
+		
+
+
+    
+	
+	<br/>
+	<center>
+	<table cellspacing="0" cellpadding="0"><tr>
+		<td><center><a href="http://kavit.com.ua/files/globalwhitelist.html"><img src="./whitelist.png" alt="Перелік дозволених ресурсів" width=50px><br/>Перелік дозволених ресурсів</a></center></td>
+		<td width=20px></td>
+		<td><center><a href="http://my.kavit.com.ua/"><img src="./profile.png" alt="Особістий кабінет та керування послугами" width=50px><br/>Особістий кабінет та керування послугами</a></center></td>
+		<td width=20px></td>
+		<td><center><a href="$(link-logout)"><img src="./disconnect.png" alt="Відключитись" width=50px><br/>Відключитись</a></center></td>
+
+	</tr></table>
+	<br/>
+
+
+    $(if login-by != 'mac')
+			<table border="1">
+				<tr><td align="right">IP:</td><td>$(ip)</td></tr>
+				<tr><td align="right">Байт вих/вхід:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+				<tr><td align="right">Час:</td><td>$(uptime)</td></tr>
+			</table>
+	$(endif)
+	</center>
+</body>
+</html>
