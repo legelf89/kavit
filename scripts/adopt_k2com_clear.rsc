@@ -1,6 +1,6 @@
 #Open manage and connect to K2COM VPN
 #Adopt script get try connect device in 2COMAnswer
-#Version: 1.2.4
+#Version: 1.2.5
 #Author: Legelf
 #Date: 2024-01-09
 #URI: https://raw.githubusercontent.com/legelf89/kavit/main/scripts/adopt_k2com_clear.rsc
@@ -8,6 +8,7 @@
 #Vars
 :local SystemName [/system identity get name];
 :local K2ComGitURI "https://raw.githubusercontent.com/legelf89/kavit/main/scripts/";
+#import adopt_k2com_clear.rsc verbose=yes  
 #
 :log info message="Try fetch script from public git";
 /tool/fetch url="https://raw.githubusercontent.com/legelf89/kavit/main/scripts/adopt_k2com_clear.rsc" mode=https
@@ -40,3 +41,5 @@ add action=accept chain=input place-before=*0 comment="Adoptopen"
 #Change default admin password
 
 #set ovpn client
+
+
