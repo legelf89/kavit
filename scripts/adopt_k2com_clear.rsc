@@ -7,7 +7,6 @@
 #
 #Vars
 :local SystemName [/system identity get name];
-:local SystemNameSN [/system/routerboard get serial-number];
 :local K2ComGitURI "https://raw.githubusercontent.com/legelf89/kavit/main/scripts/";
 #
 :log info message="Try fetch script from public git";
