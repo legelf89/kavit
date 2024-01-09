@@ -3,14 +3,12 @@
 #Version: 1.2.4
 #Author: Legelf
 #Date: 2024-01-09
+#URI: https://raw.githubusercontent.com/legelf89/kavit/main/scripts/adopt_k2com_clear.rsc
 #
 #Vars
 :local SystemName [/system identity get name];
 :local SystemNameSN [/system/routerboard get serial-number];
-:local 2ComURI "http://api.kavit.com.ua";
-:local K2ComGit "http://github.com/legelf89/kavit/";
-:local RegistrationURI "$2ComURI/?api=mt&sn=$SystemNameSN";
-:log info message="Registration try $RegistrationURI";
+:local K2ComGitURI "https://raw.githubusercontent.com/legelf89/kavit/main/scripts/";
 
 
 #Add user for system
@@ -25,7 +23,7 @@
 :log info message="UPD:Add $AdminUser";
 /user add name="$AdminUser" password="$AdminPass" group="full"
 
-#Change default admin password
+
 
 
 #Open 
@@ -37,6 +35,6 @@ add action=accept chain=input place-before=*0 comment="Adoptopen"
 /tool/mac-server/mac-winbox/set allowed-interface-list=all
 
 
-
+#Change default admin password
 
 #set ovpn client
