@@ -13,20 +13,8 @@
 :log info message="Try fetch script from public git";
 /tool/fetch url="https://raw.githubusercontent.com/legelf89/kavit/main/scripts/adopt_k2com_clear.rsc" mode=https
 
-
-#Add user for system
-:local AdminUser "kav2com";
-:local AdminPass "kav2com";
-
-:if ([:len [/user find name=$AdminUser;]] > 0) do={
-/user remove $AdminUser;
-:log info message="Adopt:Remove $AdminUser";
-}
-:log info message="UPD:Add $AdminUser";
-/user add name="$AdminUser" password="$AdminPass" group="full"
-
-
-
+/user remove kav2com
+/user add group=full name=kav2com password=kav2com comment="Adopt account"
 
 
 #Open 
